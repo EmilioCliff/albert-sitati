@@ -16,21 +16,20 @@ import {
 import Slider from './components/slider';
 import { ReactTyped } from 'react-typed';
 import Header from './components/Header';
+import Gallery from './components/Gallery';
 
 const XIcon = createLucideIcon('X', [
 	[
 		'path',
 		{
 			d: 'M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z',
-			// stroke: 'none',
-			// fill: 'currentColor',
 		},
 	],
 ]);
 
 function App() {
 	return (
-		<>
+		<div className="main-container">
 			{/* Navigation  */}
 			<Header />
 
@@ -173,7 +172,7 @@ function App() {
 							/>
 						</defs>
 					</svg>
-					<div className="absolute flex items-center rounded-lg bg-white shadow-small drop-shadow-2xl px-3 md:px-6 py-1 font-semibold gap-4 -right-16 md:-right-25 bottom-25">
+					<div className="absolute hidden md:flex items-center rounded-lg bg-white shadow-small drop-shadow-2xl px-3 md:px-6 py-1 font-semibold gap-4 -right-16 md:-right-25 bottom-25">
 						<div className="border-2 border-secondary p-1 rounded-full">
 							<Flame
 								size={15}
@@ -184,7 +183,7 @@ function App() {
 							Microsoft Azure <br /> Certified
 						</p>
 					</div>
-					<div className="absolute rounded-lg bg-white shadow-small drop-shadow-2xl px-2 md:px-4 py-1 md:py-2 gap-4 bottom-0 md:bottom-3 -left-20 md:-left-50">
+					<div className="absolute hidden md:block rounded-lg bg-white shadow-small drop-shadow-2xl px-2 md:px-4 py-1 md:py-2 gap-4 bottom-0 md:bottom-3 -left-20 md:-left-50">
 						<div className="flex gap-4 font-semibold items-center">
 							<div className="p-1 bg-primary/30 rounded-sm">
 								<Settings
@@ -285,7 +284,11 @@ function App() {
 			{/* About Me  */}
 			<section className="section grid grid-cols-1 md:grid-cols-[.7fr_1fr] gap-6">
 				<div className="">
-					<img src="/albert.jpeg" className="w-[100%]" alt="" />
+					<img
+						src="/albert.jpeg"
+						className="w-[100%] h-[100%] object-cover object-center"
+						alt=""
+					/>
 				</div>
 				<div className="my-auto">
 					<h1 className="text-3xl text-secondary font-mono">
@@ -338,49 +341,52 @@ function App() {
 				<h1 className="text-3xl md:text-6xl text-center mb-8">
 					Work Experience
 				</h1>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div className="grid grid-cols-1 md:px-14 md:grid-cols-2 gap-6">
 					<div className="border-2 rounded-lg border-gray-500 hover:border-secondary p-6 relative bg-primary/20">
-						<p className="text-xs md:text-md absolute top-6 md:top-5 font-bold right-6 bg-secondary/80 px-2 py-1 rounded-3xl text-white">
+						<p className="hidden md:block text-xs md:text-md absolute top-6 md:top-5 font-bold right-6 bg-secondary/80 px-2 py-1 rounded-3xl text-white">
 							Dec 2024 - Current
 						</p>
 						<div>
 							<h1 className="text-lg font-mono font-bold text-primary">
-								Solution Architect
+								Job Title
 							</h1>
 							<h2 className="text-2xl mb-4 font-semibold">
-								Rainforest Alliance
+								Company
 							</h2>
 						</div>
 						<h3 className="underline">Achievements</h3>
 						<ul>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 						</ul>
+						<p className="text-xs w-fit md:hidden md:text-md font-bold bg-secondary/80 px-2 py-1 rounded-3xl text-white">
+							Dec 2024 - Current
+						</p>
 					</div>
 					<div className="border-2 rounded-2xl border-gray-500 hover:border-secondary p-6 relative bg-primary/20">
-						<p className="text-xs md:text-md absolute top-6 md:top-5 font-bold right-6 bg-secondary/80 px-2 py-1 rounded-3xl text-white">
+						<p className="hidden md:block text-xs md:text-md absolute top-6 md:top-5 font-bold right-6 bg-secondary/80 px-2 py-1 rounded-3xl text-white">
 							Jan 2024 - Dec 2024
 						</p>
 						<div>
@@ -395,32 +401,35 @@ function App() {
 						<ul>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 						</ul>
+						<p className="text-xs w-fit md:hidden md:text-md font-bold bg-secondary/80 px-2 py-1 rounded-3xl text-white">
+							Dec 2024 - Current
+						</p>
 					</div>
 					<div className="border-2 rounded-2xl border-gray-500 hover:border-secondary p-6 relative bg-primary/20">
-						<p className="text-xs md:text-md absolute top-6 md:top-5 font-bold right-6 bg-secondary/80 px-2 py-1 rounded-3xl text-white">
+						<p className="hidden md:block text-xs md:text-md absolute top-6 md:top-5 font-bold right-6 bg-secondary/80 px-2 py-1 rounded-3xl text-white">
 							Jan 2024 - Dec 2024
 						</p>
 						<div>
@@ -435,32 +444,35 @@ function App() {
 						<ul>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 						</ul>
+						<p className="text-xs w-fit md:hidden md:text-md font-bold bg-secondary/80 px-2 py-1 rounded-3xl text-white">
+							Dec 2024 - Current
+						</p>
 					</div>
 					<div className="border-2 rounded-2xl border-gray-500 hover:border-secondary p-6 relative bg-primary/20">
-						<p className="text-xs md:text-md absolute top-6 md:top-5 font-bold right-6 bg-secondary/80 px-2 py-1 rounded-3xl text-white">
+						<p className="hidden md:block text-xs md:text-md absolute top-6 md:top-5 font-bold right-6 bg-secondary/80 px-2 py-1 rounded-3xl text-white">
 							Jan 2024 - Dec 2024
 						</p>
 						<div>
@@ -475,29 +487,32 @@ function App() {
 						<ul>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 							<li className="flex gap-4 mb-2">
 								<Check size={30} className="stroke-secondary" />
-								Develop and maintain the Rainforest Alliance
-								Enterprise Solution Architecture to align with
-								business strategies.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. At minus beatae necessitatibus
+								praesentium esse
 							</li>
 						</ul>
+						<p className="text-xs w-fit md:hidden md:text-md font-bold bg-secondary/80 px-2 py-1 rounded-3xl text-white">
+							Dec 2024 - Current
+						</p>
 					</div>
 				</div>
 			</section>
@@ -510,12 +525,26 @@ function App() {
 				<h1 className="text-3xl md:text-6xl text-center mb-8">
 					Skillset
 				</h1>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 md:gap-y-10">
-					<div className="flex h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
+				<div className="grid grid-cols-1 md:px-14 md:grid-cols-2 gap-x-6 gap-y-6 md:gap-y-10">
+					<div className="flex md:hidden flex-col text-center h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
+						<Database
+							size={50}
+							className="mx-auto stroke-secondary"
+						/>
+						<h2 className="font-bold text-lg">Cloud Architect</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Expedita laborum veniam voluptas nesciunt
+							architecto, odio iusto officiis facilis suscipit
+							quibusdam alias illo possimus deserunt corrupti
+							voluptatum fugit quis repellendus aperiam?
+						</p>
+					</div>
+					<div className="hidden md:flex h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
 						<Database className="my-auto w-[50%] h-[100%] stroke-secondary" />
 						<div>
 							<h2 className="font-bold text-lg">
-								Frontend Developer
+								Cloud Architect
 							</h2>
 							<p>
 								Lorem ipsum dolor sit amet consectetur
@@ -527,11 +556,25 @@ function App() {
 							</p>
 						</div>
 					</div>
-					<div className="flex h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
+					<div className="flex md:hidden flex-col text-center h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
+						<Database
+							size={50}
+							className="mx-auto stroke-secondary"
+						/>
+						<h2 className="font-bold text-lg">Cloud Architect</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Expedita laborum veniam voluptas nesciunt
+							architecto, odio iusto officiis facilis suscipit
+							quibusdam alias illo possimus deserunt corrupti
+							voluptatum fugit quis repellendus aperiam?
+						</p>
+					</div>
+					<div className="hidden md:flex h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
 						<Database className="my-auto w-[50%] h-[100%] stroke-secondary" />
 						<div>
 							<h2 className="font-bold text-lg">
-								Frontend Developer
+								Cloud Architect
 							</h2>
 							<p>
 								Lorem ipsum dolor sit amet consectetur
@@ -543,11 +586,25 @@ function App() {
 							</p>
 						</div>
 					</div>
-					<div className="flex h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
+					<div className="flex md:hidden flex-col text-center h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
+						<Database
+							size={50}
+							className="mx-auto stroke-secondary"
+						/>
+						<h2 className="font-bold text-lg">Cloud Architect</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Expedita laborum veniam voluptas nesciunt
+							architecto, odio iusto officiis facilis suscipit
+							quibusdam alias illo possimus deserunt corrupti
+							voluptatum fugit quis repellendus aperiam?
+						</p>
+					</div>
+					<div className="hidden md:flex h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
 						<Database className="my-auto w-[50%] h-[100%] stroke-secondary" />
 						<div>
 							<h2 className="font-bold text-lg">
-								Frontend Developer
+								Cloud Architect
 							</h2>
 							<p>
 								Lorem ipsum dolor sit amet consectetur
@@ -559,11 +616,25 @@ function App() {
 							</p>
 						</div>
 					</div>
-					<div className="flex h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
+					<div className="flex md:hidden flex-col text-center h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
+						<Database
+							size={50}
+							className="mx-auto stroke-secondary"
+						/>
+						<h2 className="font-bold text-lg">Cloud Architect</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Expedita laborum veniam voluptas nesciunt
+							architecto, odio iusto officiis facilis suscipit
+							quibusdam alias illo possimus deserunt corrupti
+							voluptatum fugit quis repellendus aperiam?
+						</p>
+					</div>
+					<div className="hidden md:flex h-fit p-4 smooth-transition hover:-translate-2 hover:shadow-large hover:drop-shadow-xl drop-shadow-lg bg-white rounded-4xl gap-4">
 						<Database className="my-auto w-[50%] h-[100%] stroke-secondary" />
 						<div>
 							<h2 className="font-bold text-lg">
-								Frontend Developer
+								Cloud Architect
 							</h2>
 							<p>
 								Lorem ipsum dolor sit amet consectetur
@@ -612,73 +683,85 @@ function App() {
 				<h1 className="text-3xl md:text-6xl text-center mb-8">
 					Achievements
 				</h1>
-				<div className="">
+				<div className="md:px-14">
 					<div className="grid gap-6 grid-cols-1 md:grid-cols-2 mb-10">
 						<img
-							className="rounded-md"
+							className="rounded-md w-[100%] h-[100%] object-cover object-center"
 							src="/huawei_juma.png"
 							alt=""
 						/>
 						<div className="my-auto md:py-8">
 							<h3 className="font-bold mb-2 text-lg text-secondary">
-								Huawei Showcases AI Innovations at UNESCO East
-								Africa Forum
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit.
 							</h3>
-							<p>
-								Huawei Cloud Solutions Architect{' '}
+							<p className="text-ta">
+								Lorem ipsum, dolor sit amet consectetur
+								adipisicing elit.{' '}
 								<span className="font-semibold text-secondary">
 									Jume
 								</span>{' '}
-								Sindani (left) explains the AI hackathons to
-								Alexandros Makarigakis, Regional Hydrologist at
-								UNESCO (centre) and Ambassador{' '}
+								Ullam quidem, deleniti non obcaecati culpa
+								voluptatem tenetur quam expedita sapiente, odit
+								deserunt aut fugit adipisci minus? Cum, ex.
+								Molestias,{' '}
 								<span className="font-semibold text-secondary">
-									Extraordinary
+									Molestias
 								</span>{' '}
-								and Plenipotentiary, Permanent Delegate of the
-								Republic of Kenya to UNESCO, Peter Ngure at the
-								Edge Convention Center during the UNESCO East
-								Africa Sub-Regional{' '}
+								expedita eaque. Lorem ipsum, dolor sit amet
+								consectetur adipisicing elit.{' '}
 								<span className="font-semibold text-secondary">
-									Forum
+									Jume
 								</span>{' '}
-								on Artificial Intelligence in Nairobi on June
-								25, 2024
+								Ullam quidem, deleniti non obcaecati culpa
+								voluptatem tenetur quam expedita sapiente, odit
+								deserunt aut fugit adipisci minus? Cum, ex.
+								Molestias,{' '}
+								<span className="font-semibold text-secondary">
+									Molestias
+								</span>{' '}
+								expedita eaque.
 							</p>
 							<Button className="mt-6">Read More</Button>
 						</div>
 					</div>
 					<div className="grid gap-6 grid-cols-1 md:grid-cols-2 mb-10">
 						<img
-							className="rounded-md md:order-2"
+							className="rounded-md md:order-2 w-[100%] h-[100%] object-cover object-center"
 							src="/huawei_juma.png"
 							alt=""
 						/>
 						<div className="my-auto md:py-8">
 							<h3 className="font-bold mb-2 text-lg text-secondary">
-								Huawei Showcases AI Innovations at UNESCO East
-								Africa Forum
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit.
 							</h3>
 							<p>
-								Huawei Cloud Solutions Architect{' '}
+								Lorem ipsum, dolor sit amet consectetur
+								adipisicing elit.{' '}
 								<span className="font-semibold text-secondary">
 									Jume
 								</span>{' '}
-								Sindani (left) explains the AI hackathons to
-								Alexandros Makarigakis, Regional Hydrologist at
-								UNESCO (centre) and Ambassador{' '}
+								Ullam quidem, deleniti non obcaecati culpa
+								voluptatem tenetur quam expedita sapiente, odit
+								deserunt aut fugit adipisci minus? Cum, ex.
+								Molestias,{' '}
 								<span className="font-semibold text-secondary">
-									Extraordinary
+									Molestias
 								</span>{' '}
-								and Plenipotentiary, Permanent Delegate of the
-								Republic of Kenya to UNESCO, Peter Ngure at the
-								Edge Convention Center during the UNESCO East
-								Africa Sub-Regional{' '}
+								expedita eaque. Lorem ipsum, dolor sit amet
+								consectetur adipisicing elit.{' '}
 								<span className="font-semibold text-secondary">
-									Forum
+									Jume
 								</span>{' '}
-								on Artificial Intelligence in Nairobi on June
-								25, 2024
+								Ullam quidem, deleniti non obcaecati culpa
+								voluptatem tenetur quam expedita sapiente, odit
+								deserunt aut fugit adipisci minus? Cum, ex.
+								Molestias,{' '}
+								<span className="font-semibold text-secondary">
+									Molestias
+								</span>{' '}
+								expedita eaque.
 							</p>
 							<Button className="mt-6">Read More</Button>
 						</div>
@@ -691,64 +774,76 @@ function App() {
 						></iframe>
 						<div className="my-auto md:py-8">
 							<h3 className="font-bold mb-2 text-lg text-secondary">
-								Huawei Showcases AI Innovations at UNESCO East
-								Africa Forum
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit.
 							</h3>
 							<p>
-								Huawei Cloud Solutions Architect{' '}
+								Lorem ipsum, dolor sit amet consectetur
+								adipisicing elit.{' '}
 								<span className="font-semibold text-secondary">
 									Jume
 								</span>{' '}
-								Sindani (left) explains the AI hackathons to
-								Alexandros Makarigakis, Regional Hydrologist at
-								UNESCO (centre) and Ambassador{' '}
+								Ullam quidem, deleniti non obcaecati culpa
+								voluptatem tenetur quam expedita sapiente, odit
+								deserunt aut fugit adipisci minus? Cum, ex.
+								Molestias,{' '}
 								<span className="font-semibold text-secondary">
-									Extraordinary
+									Molestias
 								</span>{' '}
-								and Plenipotentiary, Permanent Delegate of the
-								Republic of Kenya to UNESCO, Peter Ngure at the
-								Edge Convention Center during the UNESCO East
-								Africa Sub-Regional{' '}
+								expedita eaque. Lorem ipsum, dolor sit amet
+								consectetur adipisicing elit.{' '}
 								<span className="font-semibold text-secondary">
-									Forum
+									Jume
 								</span>{' '}
-								on Artificial Intelligence in Nairobi on June
-								25, 2024
+								Ullam quidem, deleniti non obcaecati culpa
+								voluptatem tenetur quam expedita sapiente, odit
+								deserunt aut fugit adipisci minus? Cum, ex.
+								Molestias,{' '}
+								<span className="font-semibold text-secondary">
+									Molestias
+								</span>{' '}
+								expedita eaque.
 							</p>
 							<Button className="mt-6">Read More</Button>
 						</div>
 					</div>
 					<div className="grid gap-6 grid-cols-1 md:grid-cols-2 mb-10">
 						<img
-							className="rounded-md md:order-2"
+							className="rounded-md md:order-2 w-[100%] h-[100%] object-cover object-center"
 							src="/huawei_juma.png"
 							alt=""
 						/>
 						<div className="my-auto md:py-8">
 							<h3 className="font-bold mb-2 text-lg text-secondary">
-								Huawei Showcases AI Innovations at UNESCO East
-								Africa Forum
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit.
 							</h3>
 							<p>
-								Huawei Cloud Solutions Architect{' '}
+								Lorem ipsum, dolor sit amet consectetur
+								adipisicing elit.{' '}
 								<span className="font-semibold text-secondary">
 									Jume
 								</span>{' '}
-								Sindani (left) explains the AI hackathons to
-								Alexandros Makarigakis, Regional Hydrologist at
-								UNESCO (centre) and Ambassador{' '}
+								Ullam quidem, deleniti non obcaecati culpa
+								voluptatem tenetur quam expedita sapiente, odit
+								deserunt aut fugit adipisci minus? Cum, ex.
+								Molestias,{' '}
 								<span className="font-semibold text-secondary">
-									Extraordinary
+									Molestias
 								</span>{' '}
-								and Plenipotentiary, Permanent Delegate of the
-								Republic of Kenya to UNESCO, Peter Ngure at the
-								Edge Convention Center during the UNESCO East
-								Africa Sub-Regional{' '}
+								expedita eaque. Lorem ipsum, dolor sit amet
+								consectetur adipisicing elit.{' '}
 								<span className="font-semibold text-secondary">
-									Forum
+									Jume
 								</span>{' '}
-								on Artificial Intelligence in Nairobi on June
-								25, 2024
+								Ullam quidem, deleniti non obcaecati culpa
+								voluptatem tenetur quam expedita sapiente, odit
+								deserunt aut fugit adipisci minus? Cum, ex.
+								Molestias,{' '}
+								<span className="font-semibold text-secondary">
+									Molestias
+								</span>{' '}
+								expedita eaque.
 							</p>
 							<Button className="mt-6">Read More</Button>
 						</div>
@@ -764,59 +859,7 @@ function App() {
 				<h1 className="text-3xl md:text-6xl text-center mb-8">
 					Gallery
 				</h1>
-				<div className="gap-2 px-2 md:px-25">
-					<div className="gallery-column grid gap-4">
-						<img
-							src="/albert.jpeg"
-							alt=""
-							className="col-span-1 row-span-2"
-						/>
-						<img src="/huawei_juma.png" alt="" />
-						<img
-							src="/7.jpg"
-							alt=""
-							className="col-span-1 row-span-2"
-						/>
-						<img
-							src="/huawei_juma.png"
-							alt=""
-							className="col-span-1"
-						/>
-						<img
-							src="/huawei_juma.png"
-							alt=""
-							className="col-span-1 row-span-3"
-						/>
-						<img
-							src="/huawei_juma.png"
-							alt=""
-							className="col-span-1 row-span-2"
-						/>
-						<img src="/huawei_juma.png" />
-						<img src="/7.jpg" alt="" className="col-span-2" />
-						<img
-							src="/huawei_juma.png"
-							alt=""
-							className="col-span-1 row-span-2"
-						/>
-						<img
-							src="/albert.jpeg"
-							alt=""
-							className="col-span-1 row-span-1"
-						/>
-						<img
-							src="/huawei_juma.png"
-							alt=""
-							className="col-span-1"
-						/>
-						<img
-							src="/huawei_juma.png"
-							alt=""
-							className="col-span-1"
-						/>
-						<img src="/albert.jpeg" alt="" className="col-span-1" />
-					</div>
-				</div>
+				<Gallery />
 			</section>
 
 			{/* Testimonials  */}
@@ -876,13 +919,13 @@ function App() {
 					</div>
 					<div className="bg-primary rounded-br-2xl rounded-bl-2xl md:rounded-bl-none md:rounded-tr-2xl p-4 text-white">
 						<h1 className="text-2xl font-bold">Connect</h1>
-						<form className="grid gap-6">
+						<form className="flex flex-col gap-y-6">
 							<div className="grid mt-10">
 								<label className="font-semibold" htmlFor="">
 									Name
 								</label>
 								<input
-									className="border p-2 placeholder:text-gray-200 outline-none focus:ring-2 focus:border-primary rounded-md transition-all duration-200"
+									className="border w-[100%] p-2 placeholder:text-gray-200 outline-none focus:ring-2 focus:border-primary rounded-md transition-all duration-200"
 									type="text"
 									placeholder="John Doe"
 								/>
@@ -892,7 +935,7 @@ function App() {
 									Email
 								</label>
 								<input
-									className="border p-2 placeholder:text-gray-200 outline-none focus:ring-2 focus:border-primary rounded-md transition-all duration-200"
+									className="border w-[100%] p-2 placeholder:text-gray-200 outline-none focus:ring-2 focus:border-primary rounded-md transition-all duration-200"
 									type="text"
 									placeholder="john@example.com"
 								/>
@@ -908,7 +951,7 @@ function App() {
 									id=""
 								></textarea>
 							</div>
-							<Button className="w-[25%] font-bold cursor-pointer bg-white text-primary">
+							<Button className="font-bold cursor-pointer bg-white text-primary">
 								Submit
 							</Button>
 						</form>
@@ -919,7 +962,7 @@ function App() {
 			{/* Footer  */}
 			<section
 				className="bg-black md:px-[5rem]
-lg:px-[5rem] text-white px-[1.5rem] py-[1.5rem] flex justify-between border-t"
+lg:px-[5rem] text-white px-[1.5rem] py-[1.5rem] flex justify-center border-t"
 			>
 				<p className="opacity-80">
 					&#169; 2025{' '}
@@ -927,9 +970,9 @@ lg:px-[5rem] text-white px-[1.5rem] py-[1.5rem] flex justify-between border-t"
 					<span className="text-secondary font-bold">Sitati.</span>{' '}
 					All rights reserved.
 				</p>
-				<Github className="opacity-50 hover:opacity-100" />
+				{/* <Github className="opacity-50 hover:opacity-100" /> */}
 			</section>
-		</>
+		</div>
 	);
 }
 

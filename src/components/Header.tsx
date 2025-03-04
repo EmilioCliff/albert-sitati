@@ -8,7 +8,7 @@ const Header = () => {
 
 	return (
 		<header className="fixed top-0 w-full z-50 backdrop-blur-2xl shadow-lg py-4 px-6 bg-gradient-to-b from-primary/20 to-base">
-			<nav className="flex justify-between items-center">
+			<nav className="flex justify-between items-center  md:px-[3rem]">
 				<div>
 					<span className="text-primary font-poppins text-lg font-bold">
 						Albert{' '}
